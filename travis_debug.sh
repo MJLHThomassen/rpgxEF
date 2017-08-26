@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CMD_PREFIX="amd64-mingw32msvc x86_64-w64-mingw32";
+CMD_PREFIX="i586-mingw32msvc i686-w64-mingw32";
 
 if [ "X$CC" = "X" ]; then
     for check in $CMD_PREFIX; do
@@ -33,7 +33,7 @@ if [ "X$WINDRES" = "X" -o "X$CC" = "X" ]; then
 fi
 
 export PLATFORM=mingw32
-export ARCH=x64
+export ARCH=x86
 
 #exec make $*
 echo "$PATH"
