@@ -36,6 +36,4 @@ export PLATFORM=mingw32
 export ARCH=x86
 
 #exec make $*
-echo "Path : " $(PATH)
-ls /usr
-
+echo "Path : " $PATH
