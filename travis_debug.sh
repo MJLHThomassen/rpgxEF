@@ -36,8 +36,6 @@ export PLATFORM=mingw32
 export ARCH=x86
 
 #exec make $*
-which i686-w64-mingw32-gcc
+echo "Path : " $(PATH)
+ls /usr
 
-echo fap
-
-which i586-mingw32msvc
