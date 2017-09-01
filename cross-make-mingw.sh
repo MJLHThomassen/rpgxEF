@@ -35,4 +35,7 @@ fi
 export PLATFORM=mingw32
 export ARCH=x86
 
+echo $PATH
+ls /usr
+
 exec make $*
