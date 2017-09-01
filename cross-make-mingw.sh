@@ -21,7 +21,7 @@ if [ "X$WINDRES" = "X" ]; then
 fi
 
 for check in $CMD_PREFIX; do
-    INCLUDE_DIR="/usr/${check}";
+    INCLUDE_DIR="/usr/${check}/include";
     if [ ! $PATH = *"$INCLUDE_DIR"* ] && [ -d "$INCLUDE_DIR" ] ; then
 	    export PATH="$INCLUDE_DIR:$PATH"
     fi
@@ -37,5 +37,6 @@ export ARCH=x86
 
 echo $PATH
 ls /usr
+cat /usr/i686-w64-mingw32/include/windows.h
 
 exec make $*
