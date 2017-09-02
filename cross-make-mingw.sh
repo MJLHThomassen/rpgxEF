@@ -8,7 +8,7 @@ if [ "X$CC" = "X" ]; then
         full_check="${check}-gcc"
 	if [ ! $(which "$full_check") = "" ]; then
 	    export CC="$full_check"
-		MINGW_VERSION = ${check};
+		MINGW_VERSION=${check};
 	fi
     done
 fi
