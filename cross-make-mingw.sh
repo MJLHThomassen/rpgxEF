@@ -26,7 +26,7 @@ CC_INCLUDE_DIR="";
 INCLUDE_DIR="/usr/${MINGW_VERSION}/include";
 if [ ! $PATH = *"$INCLUDE_DIR"* ] && [ -d "$INCLUDE_DIR" ] ; then
 	export PATH="$INCLUDE_DIR:$PATH"
-	export CC_INCLUDE_DIR="-IINCLUDE_DIR"
+	export CC_INCLUDE_DIR="-I${INCLUDE_DIR}"
 fi
 
 if [ "X$WINDRES" = "X" -o "X$CC" = "X" ]; then
@@ -51,6 +51,6 @@ ls /usr
 
 echo ""
 echo "windows.h: "
-cat /usr/i686-w64-mingw32/include/windows.h
+cat ${INCLUDE_DIR}/windows.h
 
 exec make $*
