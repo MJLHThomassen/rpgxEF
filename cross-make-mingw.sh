@@ -3,24 +3,22 @@
 CMD_PREFIX="i586-mingw32msvc i686-w64-mingw32";
 MINGW_VERSION="";
 
-if [ "X$CC" = "X" ]; then
-    for check in $CMD_PREFIX; do
-        full_check="${check}-gcc"
+for check in $CMD_PREFIX; do
+	full_check="${check}-gcc"
 	if [ ! $(which "$full_check") = "" ]; then
-	    export CC="$full_check"
+		export CC="$full_check"
 		MINGW_VERSION=${check};
 	fi
-    done
-fi
+done
 
-if [ "X$WINDRES" = "X" ]; then
-    for check in $CMD_PREFIX; do
-        full_check="${check}-windres"
+
+for check in $CMD_PREFIX; do
+	full_check="${check}-windres"
 	if [ ! $(which "$full_check") = "" ]; then
-	    export WINDRES="$full_check"
+		export WINDRES="$full_check"
 	fi
-    done
-fi
+done
+
 
 CC_INCLUDE_DIR="";
 INCLUDE_DIR="/usr/${MINGW_VERSION}/include";
