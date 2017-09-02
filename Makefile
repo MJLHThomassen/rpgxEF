@@ -4,7 +4,7 @@
 # GNU Make required
 #
 
-CFLAGS += -std=gnu11 $(CC_INCLUDE_DIR)
+CFLAGS += -std=gnu11
 
 COMPILE_PLATFORM=$(shell uname|sed -e s/_.*//|tr '[:upper:]' '[:lower:]'|sed -e 's/\//_/g')
 
