@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 RELEASES=(linux_x86 linux_x64 windows_x86 windows_x64)
 
