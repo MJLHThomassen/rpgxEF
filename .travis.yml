@@ -37,4 +37,4 @@ deploy:
   file: publish/*.zip
   skip_cleanup: true
   on:
-    repo: MJLHThomassen/rpgxEF
+    tags: true
