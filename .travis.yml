@@ -19,8 +19,10 @@ addons:
     - mingw-w64
     - gcc-multilib
 
-script: 
-- ./make-i386.sh # 32-bits Linux Binaries
-- make # 64-bits Linux Binaries
-- ./cross-make-mingw.sh # 32-bits Windows Binaries
-- ./cross-make-mingw64.sh # 64-bits Windows Binaries
+env:
+  - MAKE_CMD=./make-i386.sh				# 32-bits Linux Binaries
+  - MAKE_CMD=make						# 64-bits Linux Binaries
+  - MAKE_CMD=./cross-make-mingw.sh		# 32-bits Windows Binaries
+  - MAKE_CMD=./cross-make-mingw64.sh	# 64-bits Windows Binaries
+  
+script: "$MAKE_CMD"
